@@ -1,0 +1,156 @@
+@import './core/reset.scss';
+@import './core/variables.scss';
+
+.container {
+  background-color: #750a0a;
+  background-repeat: no-repeat;
+  height: 100%;
+  &_header {
+    &_title {
+      text-align: center;
+      font-family: $font-text;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      font-weight: 700;
+      font-size: 6rem;
+      color: rgb(250, 165, 7);
+      text-shadow: 2px 2px 2px #ce0e0e, 1px 2px 1px #f70404, 1px 3px 1px #af0606,
+        1px 4px 1px #444343, 1px 5px 1px #919191, 1px 6px 1px #595757,
+        1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191,
+        1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4),
+        1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2),
+        1px 30px 60px rgba(16, 16, 16, 0.4);
+    }
+  }
+  &_main {
+    font-family: $font-text;
+    &_filters {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 1rem;
+      background-color: rgb(250, 165, 7);
+      border-radius: 50px;
+      height: 6rem;
+    }
+  }
+}
+.page {
+  &_ulCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 50px;
+    gap: 0.5rem;
+    @media all and (min-width: 700px) {
+      margin-left: 0.7rem;
+    }
+    @media all and (min-width: 1024px) {
+      margin-left: 1.5rem;
+    }
+    &_card {
+      width: 7rem;
+      border: 2px dotted rgb(250, 165, 7);
+      border-radius: 30px;
+      padding: 0.6rem;
+      @media all and (min-width: 700px) {
+        width: 14rem;
+      }
+      @media all and (min-width: 1024px) {
+        width: 17.5rem;
+      }
+      &_poster {
+        width: 5.5rem;
+        border-radius: 20px;
+        @media all and (min-width: 700px) {
+          width: 12rem;
+          margin-left: 0.5rem;
+        }
+        @media all and (min-width: 1024px) {
+          width: 15rem;
+        }
+      }
+      &_text1 {
+        width: 5.5rem;
+        color: rgba(255, 174, 0, 0.899);
+        font-size: 1rem;
+        font-family: $font-play;
+        text-align: center;
+        @media all and (min-width: 700px) {
+          width: 12rem;
+          font-size: 2rem;
+        }
+        @media all and (min-width: 1024px) {
+          width: 15rem;
+          padding-top: 1rem;
+        }
+      }
+      &_text2 {
+        width: 5.5rem;
+        color: rgba(239, 240, 233, 0.899);
+        font-size: 1rem;
+        font-family: $font-play;
+        font-weight: bold;
+        text-align: center;
+        padding: 5px;
+        @media all and (min-width: 700px) {
+          width: 12rem;
+          font-size: 2rem;
+        }
+        @media all and (min-width: 1024px) {
+          width: 15rem;
+        }
+      }
+      &_text3 {
+        width: 5.5rem;
+        color: rgba(255, 174, 0, 0.899);
+        font-size: 1rem;
+        font-family: $font-play;
+        font-weight: bold;
+        text-align: center;
+        @media all and (min-width: 700px) {
+          width: 12rem;
+          font-size: 2rem;
+        }
+        @media all and (min-width: 1024px) {
+          width: 15rem;
+        }
+      }
+    }
+  }
+}
+.search {
+  text-align: center;
+  padding: 1.5rem;
+  &_form {
+    width: 6rem;
+    &_label {
+      color: #750a0a;
+      font-weight: bold;
+      font-size: 1.7rem;
+      ::placeholder{
+        padding-left: 0.5rem;
+      }
+      &_select{
+        border-radius: 8px;
+        border:3px solid rgba(31, 29, 29, 0.2);
+        width: 8rem;
+        @media all and (min-width: 700px){
+          width: 18rem;
+        }
+        @media all and (min-width: 1024px){
+          width: 30rem;
+        }
+      }
+      &_input {
+        border:3px solid rgba(31, 29, 29, 0.2);
+        width: 10rem;
+        border-radius: 10px;
+        @media all and (min-width: 700px){
+          width: 20rem;
+        }
+        @media all and (min-width: 1024px){
+          width: 30rem;
+        }
+      }
+    }
+  }
+}
