@@ -38,6 +38,7 @@
   &_ulCard {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
     border-radius: 50px;
     gap: 0.5rem;
     @media all and (min-width: 700px) {
@@ -117,9 +118,20 @@
     }
   }
 }
+.year{
+  margin-left: 4.5rem;
+  @media all and (min-width: 700px) {
+    margin-left: 9rem;
+  }
+  @media all and (min-width: 1024px) {
+    margin-left: 9rem;
+  }
+}
 .search {
   text-align: center;
   padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
   &_form {
     width: 6rem;
     &_label {
@@ -137,7 +149,7 @@
           width: 18rem;
         }
         @media all and (min-width: 1024px){
-          width: 30rem;
+          width: 28.2rem;
         }
       }
       &_input {
