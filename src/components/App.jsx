@@ -11,6 +11,7 @@ import Filters from './Filters';
 function App() {
   const [listMovies, setListMovies] = useState(ls.get('movies', []));
   const [movieFilter, setMovieFilter] = useState('');
+  const [yearFilter, setYearFilter] = useState('');
 
   useEffect(() => {
     if (ls.get('movies', null) === null) {
@@ -25,16 +26,29 @@ function App() {
     setMovieFilter(value);
   };
 
+ const handleChangeYear = (value) => {
+    setYearFilter(value === '' ? '' : parseInt(value));
+  };
+
   const filteredMovies = listMovies.filter((movie) =>
     movie.name.toLowerCase().includes(movieFilter)
-  );
+  ). filter(movie => {
+    if(yearFilter === ''){
+      return true;
+    }else{
+      return yearFilter === movie.year;
+    }
+  })
 
+ 
+  const years = listMovies.map(movie => movie.year);
   return (
     <div className='container'>
       <Header />
       <main className='container_main'>
         <section className='container_main_filters'>
-          <Filters movieFilter={movieFilter} handleChange={handleChange} />
+          <Filters movieFilter={movieFilter} handleChange={handleChange} yearFilter={yearFilter} handleChangeYear={handleChangeYear}
+          years={years}/>
         </section>
         <section className='container_main_movies'>
           <MovieSceneList movies={filteredMovies} />
