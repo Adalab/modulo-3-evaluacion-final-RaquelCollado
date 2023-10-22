@@ -1,8 +1,4 @@
+function movieDetail(){
 
-function MovieSceneDetail() {
-  return (
-    <div>MovieSceneDetail</div>
-  )
 }
-
-export default MovieSceneDetail
+export default movieDetail;

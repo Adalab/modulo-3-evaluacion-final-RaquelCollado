@@ -1,11 +1,21 @@
 import MovieSceneItem from './MovieSceneItem';
-function MovieSceneList() {
+function MovieSceneList({ movies }) {
+  const renderMovies = movies.map((movie) => {
+    return (
+      <li className='page_ulCard_card' key={movie.id}>
+        <MovieSceneItem movie={movie}/>
+      </li>
+    );
+  });
   return (
-    <div>
-      <ul>
-        <MovieSceneItem/>
-      </ul>
-    </div>
+    <>
+      <section className='container_main_movies'>
+        {' '}
+        <ul>
+          {renderMovies}
+        </ul>
+      </section>
+    </>
   );
 }
 
