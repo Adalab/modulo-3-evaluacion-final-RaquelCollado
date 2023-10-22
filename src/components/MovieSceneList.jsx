@@ -11,7 +11,7 @@ function MovieSceneList({ movies }) {
     <>
       <section className='container_main_movies'>
         {' '}
-        <ul>
+        <ul className='page_ulCard'>
           {renderMovies}
         </ul>
       </section>
