@@ -4,6 +4,11 @@ function FilterByMovie({movieFilter, handleChange}) {
         handleChange(ev.target.value);
 
     }
+    const handleKeyDown = (ev) => {
+      if (ev.key === 'Enter') {
+        ev.preventDefault(); // Evita que la página se recargue al presionar "Enter"
+      }
+    }
   return (
     <div className="movie">
       <label className='search_form_label' htmlFor='search'>
@@ -17,6 +22,7 @@ function FilterByMovie({movieFilter, handleChange}) {
           placeholder='Search movie'
           value={movieFilter}
           onChange={handleInput}
+          onKeyDown={handleKeyDown}
         />
       </label>
     </div>
