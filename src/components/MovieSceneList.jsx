@@ -1,19 +1,20 @@
 import MovieSceneItem from './MovieSceneItem';
+import { Link } from 'react-router-dom';
 function MovieSceneList({ movies }) {
   const renderMovies = movies.map((movie) => {
     return (
-      <li className='page_ulCard_card' key={movie.id}>
-        <MovieSceneItem movie={movie}/>
-      </li>
+      <Link to={'/movie/' + movie.id} key={movie.id}>
+        <li className='page_ulCard_card' >
+          <MovieSceneItem movie={movie} />
+        </li>
+      </Link>
     );
   });
   return (
     <>
       <section className='container_main_movies'>
         {' '}
-        <ul className='page_ulCard'>
-          {renderMovies}
-        </ul>
+        <ul className='page_ulCard'>{renderMovies}</ul>
       </section>
     </>
   );
