@@ -32,7 +32,7 @@ function App() {
   };
 
   const filteredMovies = listMovies
-    .filter((movie) => movie.name.toLowerCase().includes(movieFilter))
+    .filter((movie) => movie.name.toLowerCase().includes(movieFilter.toLowerCase()))
     .filter((movie) => {
       if (yearFilter === '') {
         return true;
