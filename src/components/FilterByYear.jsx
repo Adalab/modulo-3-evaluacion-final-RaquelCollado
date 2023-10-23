@@ -1,13 +1,15 @@
+import uuid from "react-uuid";
+
 function FilterByYear({ yearFilter, handleChangeYear, years }) {
   const handleSelect = (ev) => {
     handleChangeYear(ev.target.value);
   };
   const renderYears = () => {
-    return years.map((year) => (
-      <option 
-      key={year} 
-      value={year}>
-      {year}
+    {/*ordenamos los años (short) de menor a mayor a - b*/ }
+    const sortedYears = years.slice().sort((a, b) => a - b);
+    return sortedYears.map((year) => (
+      <option key={uuid()} value={year}>
+        {year}
       </option>
     ));
   };

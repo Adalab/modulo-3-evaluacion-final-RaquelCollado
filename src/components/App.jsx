@@ -40,18 +40,28 @@ function App() {
     }
   })
 
- 
-  const years = listMovies.map(movie => movie.year);
+ {/*cogemos los años de las pelis para el select,evitamos que se dupliquen (set) los años */ }
+  const years = listMovies.map((movie) => movie.year);
+  const getYears = ()=>{
+    const years = listMovies.map((movie) => movie.year);
+    const uniquesYears = new Set(years);
+    const uniquesArray = [...uniquesYears];
+    return uniquesArray;
+  }
   return (
     <div className='container'>
       <Header />
       <main className='container_main'>
         <section className='container_main_filters'>
           <Filters movieFilter={movieFilter} handleChange={handleChange} yearFilter={yearFilter} handleChangeYear={handleChangeYear}
-          years={years}/>
+          years={getYears()}/>
         </section>
         <section className='container_main_movies'>
-          <MovieSceneList movies={filteredMovies} />
+{/*mensaje de error en caso de no encontrar lo filtrado*/ }
+        {filteredMovies.length === 0 ? (
+            <p className='errormsg'>The search has not returned results</p>
+          ) : (
+          <MovieSceneList movies={filteredMovies} />)}
         </section>
       </main>
     </div>
