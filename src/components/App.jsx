@@ -42,7 +42,6 @@ function App() {
     })
     .sort((a, b) => a.name.localeCompare(b.name));
  
-  const years = listMovies.map((movie) => movie.year);
   const getYears = () => {
     const years = listMovies.map((movie) => movie.year);
     const uniquesYears = new Set(years);
