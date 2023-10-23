@@ -39,11 +39,9 @@ function App() {
       } else {
         return yearFilter === movie.year;
       }
-    });
-
-  {
-    /*cogemos los años de las pelis para el select,evitamos que se dupliquen (set) los años */
-  }
+    })
+    .sort((a, b) => a.name.localeCompare(b.name));
+ 
   const years = listMovies.map((movie) => movie.year);
   const getYears = () => {
     const years = listMovies.map((movie) => movie.year);
