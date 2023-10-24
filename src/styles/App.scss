@@ -131,9 +131,34 @@
 }
 .search {
   text-align: center;
-  padding: 1.5rem;
+  padding: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; 
+  @media all and (min-width: 700px) {
+    gap: 10rem;
+     
+   }
+   @media all and (min-width: 1024px) {
+    gap: 16.5rem;
+   }
+  &_btn{
+    background-color: transparent;
+    border-color: transparent;
+    height: 1.5rem;
+    margin-left: 4rem;
+    padding-bottom: 1.5rem;
+    cursor: pointer;
+    @media all and (min-width: 700px) {
+     padding-left: 5rem;
+    }
+    @media all and (min-width: 1024px) {
+      padding-left: 8.5rem;
+    }
+    &_reset{
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+}
   &_form {
     width: 6rem;
     &_label {
@@ -142,6 +167,7 @@
       font-size: 1.7rem;
       ::placeholder {
         padding-left: 0.5rem;
+        
       }
       &_select {
         display: inline-block;

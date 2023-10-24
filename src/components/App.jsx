@@ -30,7 +30,11 @@ function App() {
   const handleChangeYear = (value) => {
     setYearFilter(value === '' ? '' : parseInt(value));
   };
-
+  const handleReset = () => {
+    setMovieFilter('');
+    setYearFilter('');
+  };
+//busca la pelicula
   const filteredMovies = listMovies
     .filter((movie) => movie.name.toLowerCase().includes(movieFilter.toLowerCase()))
     .filter((movie) => {
@@ -40,6 +44,7 @@ function App() {
         return yearFilter === movie.year;
       }
     })
+  //ordeno alfabeticamente el listado de peliculas.
     .sort((a, b) => a.name.localeCompare(b.name));
  
   const getYears = () => {
@@ -49,6 +54,7 @@ function App() {
     return uniquesArray;
   };
 
+ 
 //busco el usuario por el id de la ruta
 
 const {pathname} = useLocation();
@@ -73,7 +79,8 @@ const movieData = listMovies.find((movie)=> (movie.id === movieId));
                     handleChange={handleChange}
                     yearFilter={yearFilter}
                     handleChangeYear={handleChangeYear}
-                    years={getYears()}
+                    years={getYears()} 
+                    handleReset= {handleReset}
                   />
                 </section>
                 <section className='container_main_movies'>
