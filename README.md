@@ -1,4 +1,4 @@
-#😲 Owen Wilson's Wow 😲
+# 😲 Owen Wilson's Wow 😲
 
 This is a React-based web application that displays a list of scenes from movies where the actor Owen Wilson has said 'wow'. The app allows users to filter scenes by movie name, year, and view detailed information about each scene.
 
@@ -53,9 +53,9 @@ npm run dev
 - This project uses the [Owen Wilson Wow API](https://owen-wilson-wow-api.onrender.com/) to retrieve scene information.
 ## 📌 Tecnologías Utilizadas
 - HTML
-- SCSS
+- SCSS / SASS
 - JavaScript
-- React.js
+- React / React-Router
 - Vite
 - Gulp
 - npm
