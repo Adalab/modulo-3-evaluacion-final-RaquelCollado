@@ -51,7 +51,7 @@ npm run dev
 ## ⭐Acknowledgments
 
 - This project uses the [Owen Wilson Wow API](https://owen-wilson-wow-api.onrender.com/) to retrieve scene information.
-## 📌 Tecnologías Utilizadas
+## 📌 Technologies
 - HTML
 - SCSS / SASS
 - JavaScript
