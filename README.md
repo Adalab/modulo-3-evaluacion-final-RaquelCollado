@@ -62,5 +62,5 @@ npm run dev
 
 ## ✒️Author
 
- Este proyecto fue desarrollado por   
+ This project was developed by 
 [@Raquel Collado](https://github.com/RaquelCollado)
